@@ -5,16 +5,10 @@
 # Table of Contents
 
 1. [Design Philosophy](#DesignPhilosophy)
+    - [Object-oriented design and composition](#)
     - [Style Guide](#StyleGuide)
     - [VCS](#VCS)
-2. [GDScript](#GDScript)
-    - [DataTypes](#DataTypes)
-        - [String](#String)
-    - [Functions](#Functions)
-        - [Breakpoints](#Breakpoints)
-        - [Warning](#Warning)
-    - [Exports](#Exports)
-    - [Signals](#Signals)
+2. [Practice](#Practice)
 3. [Source](#Source)
 
 ## Design Philosophy
@@ -31,12 +25,12 @@ A Godot scene could be a Weapon, a Character, an Item, a Door, a Level, part of 
 
 It's different from prefabs you find in several 3D engines, as you can then inherit from and extend those scenes. You may create a Magician that extends your Character. Modify the Character in the editor and the Magician will update as well. It helps you build your projects so that their structure matches the game's design.
 
-![](other-vs-godot.png)
+![](./images/other-vs-godot.png)
 
 
 Also note that Godot offers many different types of objects called nodes, each with a specific purpose. Nodes are part of a tree and always inherit from their parents up to the Node class. Although the engine does feature components like collision shapes, they're the exception, not the norm.
 
-![](rpg-nodes.png)
+![](./images/rpg-nodes.png)
 
 
 ### Style Guide
@@ -45,17 +39,22 @@ For consistency across projects, we recommend following these guidelines:
 
 - Use snake_case for folder and file names (with the exception of C# scripts). This sidesteps case sensitivity issues that can crop up after exporting a project on Windows. C# scripts are an exception to this rule, as the convention is to name them after the class name which should be in PascalCase.
 - Use PascalCase for node names, as this matches built-in node casing.
-- In general, keep third-party resources in a top-level addons/ folder, even if they aren't editor plugins. This makes it easier to track which files are third-party. There are some exceptions to this rule; for instance, if you use third-party game assets for a character, it makes more sense to include them within the same folder as the character scenes and scripts.
+- In general, keep third-party resources in a top-level addons/folder, even if they aren't editor plugins. This makes it easier to track which files are third-party. There are some exceptions to this rule; for instance, if you use third-party game assets for a character, it makes more sense to include them within the same folder as the character scenes and scripts.
 Try to keep the name of your folder simple here some examples:
-    - /models/town/house.
+    - /models/town/house
     - /levels/riverdale/riverdale
     - /characters/enemies/goblin
 
 
-### VCS 
+### VCS
 Use Git. That's it.
 
-## GDScript
+## Practice
+
+Let's take our scene and create a new script.
+![](./images/new-script-tmp.png)
+
+
 
 
 ## Source
